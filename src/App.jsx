@@ -4,7 +4,7 @@ import planes from "./json/planes.json";
 
 export default function App() {
     return (
-        <Section title="Planes Collection">
+        <Section title="Коллекція літаків">
             <PlanesList items={planes} />
         </Section>
     )
