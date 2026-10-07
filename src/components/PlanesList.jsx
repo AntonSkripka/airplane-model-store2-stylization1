@@ -1,4 +1,5 @@
 import PlaneItem from "./PlaneItem"
+import { getBgColorBuiltInStyles } from "../utils/getBackgroundColor";
 
 // const localImages = require.context("../images", true, /\.(avif|gif|jpe?g|png|svg|webp)$/i)
 
@@ -9,6 +10,17 @@ import PlaneItem from "./PlaneItem"
 
 //     const imagePath = `./${imageUrl.slice("../images/".length)}`
 //     return localImages(imagePath)
+// }
+// function getBgColorBuiltInStyles(year) {
+//     if (!year || year != Number(year)) return 'grey';
+
+//     if (year < 1946) {
+//         return '#ffdb92';
+//     } else if (year < 2000) {
+//         return '#d2fdbd';
+//     } else {
+//         return '#d6f1ff';
+//     }
 // }
 
 export default function PlanesList({ items }) {
@@ -32,11 +44,11 @@ export default function PlanesList({ items }) {
                         display: "grid",
                         gap: 12,
                         padding: 10,
-                        backgroundColor: '#ffdb92', // "year" до 1946
+                        // backgroundColor: '#ffdb92', // "year" до 1946
                         // backgroundColor: '#d2fdbd', // "year"  1946 - 1999
                         // backgroundColor: '#d6f1ff', // "year" від 2000
                         // ! Для визначення кольору фону картки в залежності від значення "year"
-                     
+                        backgroundColor: getBgColorBuiltInStyles(item.info.year),
                         outline: "1px solid grey",
                     }}
 
