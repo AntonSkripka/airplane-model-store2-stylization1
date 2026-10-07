@@ -1,22 +1,22 @@
 import defaultImage from "./default.png" //! Дефолтне зображення
 
-//! Стилі для текстових полів
-const textField = {
-    fontSize: '18px',
-    fontWeight: 700,
-}
+// //! Стилі для текстових полів
+// const textField = {
+//     fontSize: '18px',
+//     fontWeight: 700,
+// }
 
-//! Стилі для значень текстових полів
-const textFieldValue = {
-    fontWeight: 400,
-    fontStyle: "italic",
-}
+// //! Стилі для значень текстових полів
+// const textFieldValue = {
+//     fontWeight: 400,
+//     fontStyle: "italic",
+// }
 
-//! Стилі для заголовків зображень
-const imageTitles = {
-    textAlign: 'center',
-    color: 'blue'
-}
+// //! Стилі для заголовків зображень
+// const imageTitles = {
+//     textAlign: 'center',
+//     color: 'blue'
+// }
 
 
 function onErrorImg(e) {
@@ -42,62 +42,41 @@ export default function PlaneItem({
     console.log(realUrl)
     return (
         <>
-            <h3 style={{
-                marginBottom: 12,
-                padding: "12px 16px",
-                fontSize: 32,
-                textAlign: 'center',
-                borderRadius: 8,
-                backgroundColor: "yellow",
-                color: "blue",
-            }}
+            <h3 
+            // style={{
+            //     marginBottom: 12,
+            //     padding: "12px 16px",
+            //     fontSize: 32,
+            //     textAlign: 'center',
+            //     borderRadius: 8,
+            //     backgroundColor: "yellow",
+            //     color: "blue",
+            // }}
+            className="planesTitle"
             >{title}</h3>
             <img src={url} alt={fullTitle} width="400" onError={(e) => onErrorImg(e)} />
-            <p style={textField}>Повна назва: <span style={textFieldValue}>{fullTitle}</span></p>
-            <p style={textField}>Тип: <span style={textFieldValue}>{type}</span></p>
-            <p style={textField}>Прізвисько: <span style={textFieldValue}>{nickname}</span></p>
-            <p style={textField}>Країна виробник: <span style={textFieldValue}>{country}</span></p>
-            <p style={textField}>Рік випуску: <span style={textFieldValue}>{year}</span></p>
-            <p style={textField}>Актуальність: <span style={textFieldValue}>{(year >= 2000) ? "сучасний" : "минуле століття"}</span></p>
-            <p style={textField}>Ціна: <span style={textFieldValue}>{price}</span></p>
-            <p style={textField}>Опис: <span style={textFieldValue}>{description}</span></p>
-            <p style={imageTitles}>Рекламна модель:</p>
+            <p className="textField">Повна назва: <span className="textFieldValue">{fullTitle}</span></p>
+            <p className="textField">Тип: <span className="textFieldValue">{type}</span></p>
+            <p className="textField">Прізвисько: <span className="textFieldValue">{nickname}</span></p>
+            <p className="textField">Країна виробник: <span className="textFieldValue">{country}</span></p>
+            <p className="textField">Рік випуску: <span className="textFieldValue">{year}</span></p>
+            <p className="textField">Актуальність: <span className="textFieldValue">{(year >= 2000) ? "сучасний" : "минуле століття"}</span></p>
+            <p className="textField">Ціна: <span className="textFieldValue">{price}</span></p>
+            <p className="textField">Опис: <span className="textFieldValue">{description}</span></p>
+            <p className="imageTitles">Рекламна модель:</p>
             <img src={promotialUrl} alt={fullTitle} width="600" onError={(e) => onErrorImg(e)} />
-            <p style={imageTitles}>Реальна модель:</p>
-            <div style={{
-                display: "flex",
-                gap: 10,
-                flexWrap: 'wrap',
-                padding: "8px",
-                borderRadius: 8,
-                backgroundColor: "gray",
-            }}
+            <p className="imageTitles">Реальна модель:</p>
+            <div 
+            className="actualImageBox"
             >
                 {realUrl.map((img, index) => {
-                    return (<img style={{
-                        maxWidth: "calc((100% - 10px) / 2)",
-                        borderRadius: 4,
-                    }} key={index}
+                    return (<img className="actualImage" key={index}
                         src={img} alt={fullTitle} width="300" onError={(e) => onErrorImg(e)} />)
                 })}
             </div>
             <br />
-            <button style={{
-                width: "70%",
-                margin: "20px auto",
-                padding: "16px 32px",
-                display: "inline-block",
-                alignItems: "center",
-                fontFamily: 'Franklin Gothic Medium, Arial Narrow',
-                fontWeight: 700,
-                fontSize: "1.5rem",
-                borderRadius: "12px",
-                color: "#ffffff",
-                cursor: "pointer",
-                backgroundColor: "#008080",
-                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.1)",
-                boxShadow: "inset 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.9)",
-            }}
+            <button 
+                className="itemButton"
                 type="button">Додати до кошику</button>
         </>
     )
