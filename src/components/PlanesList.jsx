@@ -1,5 +1,6 @@
 import PlaneItem from "./PlaneItem"
-import { getBgColorBuiltInStyles } from "../utils/getBackgroundColor";
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../utils/getBackgroundColor";
+
 
 // const localImages = require.context("../images", true, /\.(avif|gif|jpe?g|png|svg|webp)$/i)
 
@@ -53,7 +54,12 @@ export default function PlanesList({ items }) {
                     //     backgroundColor: getBgColorBuiltInStyles(item.info.year),
                     //     outline: "1px solid grey",
                     // }}
-                    className="planesItem"
+                    // className="planesItem"
+                    // className="planesItem last"
+                    // className="planesItem last current"
+                    className={getBgColorVanillaCSS(item.info.year)}
+                    // className={getBgColorVanillaCSS(item.info.year).join(" ")}
+
 
                 >
                     <PlaneItem

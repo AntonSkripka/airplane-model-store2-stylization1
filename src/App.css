@@ -30,6 +30,18 @@
   outline: 1px solid grey;
 }
 
+/** backgroundColor: '#d2fdbd', // "year"  1946 - 1999 - last */
+.planesItem.last {
+  background-color: #d2fdbd;
+}
+
+/** backgroundColor: '#d6f1ff', // "year" від 2000 - current */
+/* todo: var.1  та var.1.1 */
+.planesItem.last.current {
+  background-color: #d6f1ff;
+}
+
+
 
 /*? Planes.jsx */
 .planesTitle {
