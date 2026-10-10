@@ -1,7 +1,16 @@
+// import clsx from "clsx";
 import PlaneItem from "./PlaneItem"
 import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../utils/getBackgroundColor";
 
+// const className = clsx(
+//   "first",
+//   10,
+//   undefined && "second",
+//   true && "third",
+//   false ? "fourth" : "fifth"
+// );
 
+// console.log(className);
 // const localImages = require.context("../images", true, /\.(avif|gif|jpe?g|png|svg|webp)$/i)
 
 // function resolveImageUrl(imageUrl) {
