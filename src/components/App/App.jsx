@@ -1,6 +1,6 @@
-import Section from "./components/Section.jsx";
-import PlanesList from "./components/PlanesList.jsx";
-import planes from "./json/planes.json";
+import Section from "../Section/Section.jsx";
+import PlanesList from "../PlanesList/PlanesList.jsx";
+import planes from "../../json/planes.json";
 
 import './App.css'; //! Ванільний CSS (Vanilla CSS) 
 

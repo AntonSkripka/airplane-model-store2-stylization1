@@ -1,7 +1,8 @@
 // import clsx from "clsx";
-import PlaneItem from "./PlaneItem"
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../utils/getBackgroundColor";
+import PlaneItem from "../PlaneItem/PlaneItem"
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../../utils/getBackgroundColor";
 
+import css from "./PlanesList.module.css"; //! CSS-модулі
 // const className = clsx(
 //   "first",
 //   10,
@@ -46,7 +47,7 @@ export default function PlanesList({ items }) {
         //         gap: 32,
         //         outline: "1px solid red",
         //     }}
-        className="planesList"
+        className={css.planesList}
 >
             {items.map((item) =>
                 <li
@@ -63,10 +64,10 @@ export default function PlanesList({ items }) {
                     //     backgroundColor: getBgColorBuiltInStyles(item.info.year),
                     //     outline: "1px solid grey",
                     // }}
-                    // className="planesItem"
+                    className="planesItem"
                     // className="planesItem last"
                     // className="planesItem last current"
-                    className={getBgColorVanillaCSS(item.info.year)}
+                    // className={getBgColorVanillaCSS(item.info.year)}
                     // className={getBgColorVanillaCSS(item.info.year).join(" ")}
 
 

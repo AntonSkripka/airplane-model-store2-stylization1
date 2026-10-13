@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
-import App from './App.jsx'
+import App from './components/App/App.jsx'
 
 //todo: var.1  Підключення Normalize (npm i normalize.css)
 // import 'normalize.css';  //! var.1 підключення тільки Normalize

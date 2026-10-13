@@ -1,5 +1,6 @@
 import defaultImage from "./default.png" //! Дефолтне зображення
 
+import css from "./PlaneItem.module.css"; //! CSS-модулі
 // //! Стилі для текстових полів
 // const textField = {
 //     fontSize: '18px',
@@ -52,31 +53,31 @@ export default function PlaneItem({
             //     backgroundColor: "yellow",
             //     color: "blue",
             // }}
-            className="planesTitle"
+            className={css.planesTitle}
             >{title}</h3>
             <img src={url} alt={fullTitle} width="400" onError={(e) => onErrorImg(e)} />
-            <p className="textField">Повна назва: <span className="textFieldValue">{fullTitle}</span></p>
-            <p className="textField">Тип: <span className="textFieldValue">{type}</span></p>
-            <p className="textField">Прізвисько: <span className="textFieldValue">{nickname}</span></p>
-            <p className="textField">Країна виробник: <span className="textFieldValue">{country}</span></p>
-            <p className="textField">Рік випуску: <span className="textFieldValue">{year}</span></p>
-            <p className="textField">Актуальність: <span className="textFieldValue">{(year >= 2000) ? "сучасний" : "минуле століття"}</span></p>
-            <p className="textField">Ціна: <span className="textFieldValue">{price}</span></p>
-            <p className="textField">Опис: <span className="textFieldValue">{description}</span></p>
-            <p className="imageTitles">Рекламна модель:</p>
+            <p className={css.textField}>Повна назва: <span className="textFieldValue">{fullTitle}</span></p>
+            <p className={css.textField}>Тип: <span className="textFieldValue">{type}</span></p>
+            <p className={css.textField}>Прізвисько: <span className="textFieldValue">{nickname}</span></p>
+            <p className={css.textField}>Країна виробник: <span className="textFieldValue">{country}</span></p>
+            <p className={css.textField}>Рік випуску: <span className="textFieldValue">{year}</span></p>
+            <p className={css.textField}>Актуальність: <span className="textFieldValue">{(year >= 2000) ? "сучасний" : "минуле століття"}</span></p>
+            <p className={css.textField}>Ціна: <span className="textFieldValue">{price}</span></p>
+            <p className={css.textField}>Опис: <span className="textFieldValue">{description}</span></p>
+            <p className={css.imageTitles}>Рекламна модель:</p>
             <img src={promotialUrl} alt={fullTitle} width="600" onError={(e) => onErrorImg(e)} />
-            <p className="imageTitles">Реальна модель:</p>
+            <p className={css.imageTitles}>Реальна модель:</p>
             <div 
-            className="actualImageBox"
+            className={css.actualImageBox}
             >
                 {realUrl.map((img, index) => {
-                    return (<img className="actualImage" key={index}
+                    return (<img className={css.actualImage} key={index}
                         src={img} alt={fullTitle} width="300" onError={(e) => onErrorImg(e)} />)
                 })}
             </div>
             <br />
             <button 
-                className="itemButton"
+                className={css.itemButton}
                 type="button">Додати до кошику</button>
         </>
     )
