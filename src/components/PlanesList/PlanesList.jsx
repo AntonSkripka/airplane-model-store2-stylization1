@@ -1,6 +1,6 @@
 // import clsx from "clsx";
-import PlaneItem from "../PlaneItem/PlaneItem"
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../../utils/getBackgroundColor";
+import PlaneItem from "@/components/PlaneItem/PlaneItem"
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "@/utils/getBackgroundColor";
 
 import css from "./PlanesList.module.css"; //! CSS-модулі
 // const className = clsx(
