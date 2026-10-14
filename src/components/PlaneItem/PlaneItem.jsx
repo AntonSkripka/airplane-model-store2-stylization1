@@ -19,7 +19,13 @@ import { FcTrademark } from "react-icons/fc";
 
 import defaultImage from "./default.png" //! Дефолтне зображення
 import { iconSize } from '@/constants/iconSize.js';
-import { getManufacturingYears } from '@/utils/formatDateDuration';
+//! Реекспорт - декілька імпортів з однієї папки
+// import { getManufacturingYears } from '@/utils/formatDateDuration';
+// import { getManufacturingYears, getBgColorVanillaCSS, getBgColorCSSModule, getBgColorBuiltInStyles } from '@/utils';
+// console.log(getBgColorVanillaCSS(1999))
+// console.log(getBgColorCSSModule(1999))
+// console.log(getBgColorBuiltInStyles(1999))
+import { getManufacturingYears } from '@/utils';
 // iconSize.md = 56;
 import css from "./PlaneItem.module.css"; //! CSS-модулі
 // //! Стилі для текстових полів
