@@ -61,3 +61,14 @@ export function getBgColorVanillaCSS(year) {
     console.log(classNames);
     return classNames;
 };
+
+export function getBgColorCSSModule(year) {
+    let className = "planesItem";
+    if (year > 1946) {
+        className += "Last"
+    }
+    if (year >= 2000) {
+        className += "Current"
+    }
+    return className;
+}

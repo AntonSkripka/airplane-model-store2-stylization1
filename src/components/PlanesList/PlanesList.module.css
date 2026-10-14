@@ -29,3 +29,13 @@
 .planesItem.last.current {
   background-color: #d6f1ff;
 }
+
+.planesItemLast {
+  composes: planesItem;
+  background-color: #d2fdbd;
+}
+
+.planesItemLastCurrent {
+  composes: planesItem;
+  background-color: #d6f1ff;
+}

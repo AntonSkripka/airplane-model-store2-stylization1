@@ -1,6 +1,6 @@
 // import clsx from "clsx";
 import PlaneItem from "@/components/PlaneItem/PlaneItem"
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "@/utils/getBackgroundColor";
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "@/utils/getBackgroundColor";
 
 import css from "./PlanesList.module.css"; //! CSS-модулі
 // const className = clsx(
@@ -64,13 +64,15 @@ export default function PlanesList({ items }) {
                     //     backgroundColor: getBgColorBuiltInStyles(item.info.year),
                     //     outline: "1px solid grey",
                     // }}
-                    className="planesItem"
+                    // className="planesItem"
                     // className="planesItem last"
                     // className="planesItem last current"
                     // className={getBgColorVanillaCSS(item.info.year)}
                     // className={getBgColorVanillaCSS(item.info.year).join(" ")}
-
-
+                    // className={css.planesItem}
+                    // className={css.planesItemLast}
+                    // className={css.planesItemCurrent}
+                    className={css[getBgColorCSSModule(item.info.year)]}
                 >
                     <PlaneItem
                         url={item.url.main}
