@@ -88,6 +88,9 @@ export default function PlanesList({ items }) {
                         description={item.info.description}
                         price={item.info.price}
                         year={item.info.year}
+
+                        startM={item.manufacturing.start}
+                        endM={item.manufacturing.end}
                     />
                 </li>)};
         </ul>

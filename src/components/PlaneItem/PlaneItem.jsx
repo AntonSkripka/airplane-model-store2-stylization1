@@ -19,6 +19,7 @@ import { FcTrademark } from "react-icons/fc";
 
 import defaultImage from "./default.png" //! Дефолтне зображення
 import { iconSize } from '@/constants/iconSize.js';
+import { getManufacturingYears } from '@/utils/formatDateDuration';
 // iconSize.md = 56;
 import css from "./PlaneItem.module.css"; //! CSS-модулі
 // //! Стилі для текстових полів
@@ -58,7 +59,10 @@ export default function PlaneItem({
     country,
     type,
     price,
-    description
+    description,
+
+    startM,
+    endM
 }) {
     console.log(realUrl)
     return (
@@ -85,6 +89,7 @@ export default function PlaneItem({
             <p className={css.textField}><GiCeremonialMask size={iconSize.md} className={css.icon}/>Прізвисько: <span className="textFieldValue">{nickname}</span></p>
             <p className={css.textField}><AiOutlineFlag size={iconSize.md} className={css.icon}/>Країна виробник: <span className="textFieldValue">{country}</span></p>
             <p className={css.textField}><AiOutlineClockCircle size={iconSize.md} className={css.icon}/>Рік випуску: <span className="textFieldValue">{year}</span></p>
+            <p className={css.textField}><TbClockHour4Filled size={iconSize.md} className={css.icon}/>Тривалість виробництва(в роках): <span className="textFieldValue">{getManufacturingYears(startM, endM)}</span></p>
             <p className={css.textField}><TbClockHour4Filled size={iconSize.md} className={css.icon}/>Актуальність: <span className="textFieldValue">{(year >= 2000) ? "сучасний" : "минуле століття"}</span></p>
             <p className={css.textField}><CiBadgeDollar size={iconSize.md} className={css.icon}/>Ціна: <span className="textFieldValue">{price}</span></p>
             <p className={css.textField}><AiOutlineInfoCircle size={iconSize.md} className={css.icon}/>Опис: <span className="textFieldValue">{description}</span></p>
